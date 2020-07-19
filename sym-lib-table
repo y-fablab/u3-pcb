@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name FabLab)(type Legacy)(uri ${KIPRJMOD}/FabLab.lib)(options "")(descr ""))
+)

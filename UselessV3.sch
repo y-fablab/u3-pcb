@@ -1,0 +1,608 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Useless Machine V3"
+Date ""
+Rev "1.0"
+Comp "Licensed under CC BY 4.0"
+Comment1 "Copyright (c) 2020 y-fablab.ch"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:WeMos_D1_mini U2
+U 1 1 5ED39B26
+P 5850 2000
+F 0 "U2" H 6100 2800 50  0000 C CNN
+F 1 "WeMos_D1_mini" V 5450 1600 50  0000 C CNN
+F 2 "Module:WEMOS_D1_mini_light" H 5850 850 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H 4000 850 50  0001 C CNN
+	1    5850 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM7805_TO220 U1
+U 1 1 5ED3C8C4
+P 5350 5900
+F 0 "U1" H 5350 6142 50  0000 C CNN
+F 1 "LM2940CT-5.0" H 5350 6051 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5350 6125 50  0001 C CIN
+F 3 "" H 5350 5850 50  0001 C CNN
+	1    5350 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5ED424C8
+P 4850 6450
+F 0 "C2" H 4965 6496 50  0000 L CNN
+F 1 "100n" H 4965 6405 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.6mm_W2.0mm_P2.50mm_MKS02_FKP02" H 4888 6300 50  0001 C CNN
+F 3 "~" H 4850 6450 50  0001 C CNN
+	1    4850 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5ED44A89
+P 5850 6450
+F 0 "C3" H 5965 6496 50  0000 L CNN
+F 1 "100n" H 5965 6405 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.6mm_W2.0mm_P2.50mm_MKS02_FKP02" H 5888 6300 50  0001 C CNN
+F 3 "~" H 5850 6450 50  0001 C CNN
+	1    5850 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:FQP27P06 Q1
+U 1 1 5ED3B2EA
+P 3350 6000
+F 0 "Q1" V 3692 6000 50  0000 C CNN
+F 1 "FQU11P06" V 3601 6000 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-251-3_Vertical" H 3550 5925 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/FQP27P06-D.PDF" H 3350 6000 50  0001 L CNN
+	1    3350 6000
+	0    1    -1   0   
+$EndComp
+$Comp
+L Transistor_FET:2N7000 Q2
+U 1 1 5ED417D3
+P 3450 6600
+F 0 "Q2" H 3655 6646 50  0000 L CNN
+F 1 "ZVN2110A" H 3655 6555 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_HandSolder" H 3650 6525 50  0001 L CIN
+F 3 "" H 3450 6600 50  0001 L CNN
+	1    3450 6600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5ED4480D
+P 2850 6100
+F 0 "R1" H 2920 6146 50  0000 L CNN
+F 1 "10k" H 2920 6055 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2780 6100 50  0001 C CNN
+F 3 "~" H 2850 6100 50  0001 C CNN
+	1    2850 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 6250 2850 6300
+Wire Wire Line
+	2850 6300 3350 6300
+$Comp
+L Device:R R3
+U 1 1 5ED46535
+P 3850 6800
+F 0 "R3" H 3920 6846 50  0000 L CNN
+F 1 "10k" H 3920 6755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3780 6800 50  0001 C CNN
+F 3 "~" H 3850 6800 50  0001 C CNN
+	1    3850 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5ED471C5
+P 3850 6100
+F 0 "R2" H 3920 6146 50  0000 L CNN
+F 1 "10k" H 3920 6055 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3780 6100 50  0001 C CNN
+F 3 "~" H 3850 6100 50  0001 C CNN
+	1    3850 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 5900 2850 5900
+Wire Wire Line
+	2850 5900 2850 5950
+Wire Wire Line
+	3550 5900 3850 5900
+Wire Wire Line
+	3850 5900 3850 5950
+Wire Wire Line
+	3650 6600 3850 6600
+Wire Wire Line
+	3850 6600 3850 6650
+Wire Wire Line
+	3850 6250 3850 6600
+Connection ~ 3850 6600
+Wire Wire Line
+	3850 6950 3850 7000
+Wire Wire Line
+	3350 7000 3350 6800
+Wire Wire Line
+	3350 6200 3350 6300
+Wire Wire Line
+	3350 6300 3350 6400
+Connection ~ 3350 6300
+Connection ~ 2850 5900
+Connection ~ 2850 6300
+$Comp
+L Diode:BAT43 D1
+U 1 1 5ED49AE2
+P 4350 6800
+F 0 "D1" H 4350 6583 50  0000 C CNN
+F 1 "BAT43" H 4350 6674 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 4350 6625 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/85660/bat42.pdf" H 4350 6800 50  0001 C CNN
+	1    4350 6800
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3850 5900
+$Comp
+L power:GND #PWR03
+U 1 1 5ED4E7E6
+P 3850 7100
+F 0 "#PWR03" H 3850 6850 50  0001 C CNN
+F 1 "GND" H 3855 6927 50  0000 C CNN
+F 2 "" H 3850 7100 50  0001 C CNN
+F 3 "" H 3850 7100 50  0001 C CNN
+	1    3850 7100
+	1    0    0    -1  
+$EndComp
+Text GLabel 2550 7300 0    50   Input ~ 0
+N_POWER_ON
+$Comp
+L power:+6V #PWR02
+U 1 1 5ED503E2
+P 3850 5800
+F 0 "#PWR02" H 3850 5650 50  0001 C CNN
+F 1 "+6V" H 3865 5973 50  0000 C CNN
+F 2 "" H 3850 5800 50  0001 C CNN
+F 3 "" H 3850 5800 50  0001 C CNN
+	1    3850 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 6300 4850 5900
+Wire Wire Line
+	4850 5900 5050 5900
+Wire Wire Line
+	5650 5900 5850 5900
+Wire Wire Line
+	5850 5900 5850 6300
+$Comp
+L power:+5V #PWR06
+U 1 1 5ED5374C
+P 5850 5800
+F 0 "#PWR06" H 5850 5650 50  0001 C CNN
+F 1 "+5V" H 5865 5973 50  0000 C CNN
+F 2 "" H 5850 5800 50  0001 C CNN
+F 3 "" H 5850 5800 50  0001 C CNN
+	1    5850 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 5800 5850 5900
+Connection ~ 5850 5900
+Connection ~ 4850 5900
+$Comp
+L Device:C C1
+U 1 1 5ED54F4A
+P 2350 6450
+F 0 "C1" H 2465 6496 50  0000 L CNN
+F 1 "100n" H 2465 6405 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.6mm_W2.0mm_P2.50mm_MKS02_FKP02" H 2388 6300 50  0001 C CNN
+F 3 "~" H 2350 6450 50  0001 C CNN
+	1    2350 6450
+	1    0    0    -1  
+$EndComp
+Connection ~ 3350 7000
+Text GLabel 4650 7300 2    50   Input ~ 0
+N_POWER_OFF
+Wire Wire Line
+	3350 7000 3850 7000
+Wire Wire Line
+	2350 6600 2350 7000
+Wire Wire Line
+	2350 6300 2350 5900
+Connection ~ 2350 5900
+Wire Wire Line
+	2350 5900 2850 5900
+$Comp
+L FabLab:JQ6500-16p U3
+U 1 1 5ED56D7F
+P 5850 3700
+F 0 "U3" H 5850 3865 50  0000 C CNN
+F 1 "JQ6500-16p" H 5850 3774 50  0000 C CNN
+F 2 "UselessV3:JQ6500-16p" H 5850 3700 50  0001 C CNN
+F 3 "" H 5850 3700 50  0001 C CNN
+	1    5850 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5ED5944F
+P 5750 1200
+F 0 "#PWR04" H 5750 1050 50  0001 C CNN
+F 1 "+5V" H 5765 1373 50  0000 C CNN
+F 2 "" H 5750 1200 50  0001 C CNN
+F 3 "" H 5750 1200 50  0001 C CNN
+	1    5750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5ED5A2D1
+P 5850 2800
+F 0 "#PWR05" H 5850 2550 50  0001 C CNN
+F 1 "GND" H 5855 2627 50  0000 C CNN
+F 2 "" H 5850 2800 50  0001 C CNN
+F 3 "" H 5850 2800 50  0001 C CNN
+	1    5850 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5ED5CDEB
+P 6450 4700
+F 0 "#PWR08" H 6450 4450 50  0001 C CNN
+F 1 "GND" H 6455 4527 50  0000 C CNN
+F 2 "" H 6450 4700 50  0001 C CNN
+F 3 "" H 6450 4700 50  0001 C CNN
+	1    6450 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR07
+U 1 1 5ED5DA40
+P 6450 3650
+F 0 "#PWR07" H 6450 3500 50  0001 C CNN
+F 1 "+5V" H 6465 3823 50  0000 C CNN
+F 2 "" H 6450 3650 50  0001 C CNN
+F 3 "" H 6450 3650 50  0001 C CNN
+	1    6450 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3650 6450 4250
+Wire Wire Line
+	6450 4250 6300 4250
+Wire Wire Line
+	6300 4350 6450 4350
+Wire Wire Line
+	6450 4350 6450 4700
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 5ED61376
+P 9200 1400
+F 0 "J3" H 9280 1442 50  0000 L CNN
+F 1 "Servo" H 9280 1351 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9200 1400 50  0001 C CNN
+F 3 "~" H 9200 1400 50  0001 C CNN
+	1    9200 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5ED6671C
+P 9200 3850
+F 0 "J5" H 9280 3842 50  0000 L CNN
+F 1 "Speaker" H 9280 3751 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9200 3850 50  0001 C CNN
+F 3 "~" H 9200 3850 50  0001 C CNN
+	1    9200 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5ED66DBE
+P 1650 6400
+F 0 "J1" H 1750 6400 50  0000 L CNN
+F 1 "Battery" H 1750 6300 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1650 6400 50  0001 C CNN
+F 3 "~" H 1650 6400 50  0001 C CNN
+	1    1650 6400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5ED67FA9
+P 1650 3300
+F 0 "J2" H 1750 3350 50  0000 L CNN
+F 1 "Flip Switch" H 1750 3250 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1650 3300 50  0001 C CNN
+F 3 "~" H 1650 3300 50  0001 C CNN
+	1    1650 3300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 6600 4850 7000
+Wire Wire Line
+	4850 7000 3850 7000
+Connection ~ 3850 7000
+Wire Wire Line
+	5850 6600 5850 7000
+Wire Wire Line
+	5850 7000 5350 7000
+Connection ~ 4850 7000
+Wire Wire Line
+	5350 6200 5350 7000
+Connection ~ 5350 7000
+Wire Wire Line
+	5350 7000 4850 7000
+Connection ~ 2350 7000
+Wire Wire Line
+	2850 6300 2850 7300
+Wire Wire Line
+	2850 7300 2550 7300
+Wire Wire Line
+	1850 6400 1850 5900
+Wire Wire Line
+	1850 5900 2350 5900
+Wire Wire Line
+	1850 6500 1850 7000
+Wire Wire Line
+	1850 7000 2350 7000
+Wire Wire Line
+	4350 6600 4350 6650
+Wire Wire Line
+	3850 6600 4350 6600
+Wire Wire Line
+	4350 6950 4350 7300
+Wire Wire Line
+	4350 7300 4650 7300
+Wire Wire Line
+	3850 7000 3850 7100
+Wire Wire Line
+	2350 7000 3350 7000
+Wire Wire Line
+	3850 5900 4850 5900
+Wire Wire Line
+	3850 5900 3850 5800
+$Comp
+L power:GND #PWR01
+U 1 1 5EE1FA5B
+P 2050 3650
+F 0 "#PWR01" H 2050 3400 50  0001 C CNN
+F 1 "GND" H 2055 3477 50  0000 C CNN
+F 2 "" H 2050 3650 50  0001 C CNN
+F 3 "" H 2050 3650 50  0001 C CNN
+	1    2050 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 3300 2050 3300
+Wire Wire Line
+	2050 3300 2050 3650
+Wire Wire Line
+	1850 3400 2250 3400
+Text GLabel 2250 3400 2    50   Output ~ 0
+N_POWER_ON
+Wire Wire Line
+	6750 3200 6750 1600
+Wire Wire Line
+	6750 1600 6250 1600
+Text GLabel 7750 900  2    50   Output ~ 0
+N_POWER_OFF
+$Comp
+L Connector_Generic:Conn_01x05 J4
+U 1 1 5EE23631
+P 9200 2800
+F 0 "J4" H 9280 2842 50  0000 L CNN
+F 1 "LED Matrix" H 9280 2751 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 9200 2800 50  0001 C CNN
+F 3 "~" H 9200 2800 50  0001 C CNN
+	1    9200 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3850 9000 3850
+Wire Wire Line
+	6300 3950 9000 3950
+Wire Wire Line
+	9000 1400 8900 1400
+Wire Wire Line
+	8900 1400 8900 1150
+Wire Wire Line
+	9000 1500 8900 1500
+Wire Wire Line
+	8900 1500 8900 1800
+$Comp
+L power:+6V #PWR010
+U 1 1 5EE2E014
+P 8900 1150
+F 0 "#PWR010" H 8900 1000 50  0001 C CNN
+F 1 "+6V" H 8915 1323 50  0000 C CNN
+F 2 "" H 8900 1150 50  0001 C CNN
+F 3 "" H 8900 1150 50  0001 C CNN
+	1    8900 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5EE2E95E
+P 8900 1900
+F 0 "#PWR011" H 8900 1650 50  0001 C CNN
+F 1 "GND" H 8905 1727 50  0000 C CNN
+F 2 "" H 8900 1900 50  0001 C CNN
+F 3 "" H 8900 1900 50  0001 C CNN
+	1    8900 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 1700 7150 1700
+Wire Wire Line
+	7150 1700 7150 4450
+Wire Wire Line
+	7150 4450 6300 4450
+Wire Wire Line
+	6250 2000 7250 2000
+Wire Wire Line
+	7250 2000 7250 4550
+Wire Wire Line
+	7250 4550 6300 4550
+Wire Wire Line
+	6250 1900 7500 1900
+Wire Wire Line
+	7500 1900 7500 900 
+Wire Wire Line
+	7500 900  7750 900 
+Wire Wire Line
+	6250 2100 7950 2100
+Wire Wire Line
+	7950 2100 7950 2600
+Wire Wire Line
+	6250 2300 7850 2300
+Wire Wire Line
+	7850 2300 7850 2800
+Wire Wire Line
+	7950 2600 9000 2600
+Wire Wire Line
+	7850 2800 9000 2800
+$Comp
+L power:GND #PWR09
+U 1 1 5EE54892
+P 8800 3150
+F 0 "#PWR09" H 8800 2900 50  0001 C CNN
+F 1 "GND" H 8805 2977 50  0000 C CNN
+F 2 "" H 8800 3150 50  0001 C CNN
+F 3 "" H 8800 3150 50  0001 C CNN
+	1    8800 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR012
+U 1 1 5EE68219
+P 8900 2500
+F 0 "#PWR012" H 8900 2350 50  0001 C CNN
+F 1 "+5V" H 8915 2673 50  0000 C CNN
+F 2 "" H 8900 2500 50  0001 C CNN
+F 3 "" H 8900 2500 50  0001 C CNN
+	1    8900 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C4
+U 1 1 5EE7E43C
+P 8550 1600
+F 0 "C4" H 8668 1646 50  0000 L CNN
+F 1 "100u" H 8668 1555 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 8588 1450 50  0001 C CNN
+F 3 "~" H 8550 1600 50  0001 C CNN
+	1    8550 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 1400 8550 1400
+Wire Wire Line
+	8550 1400 8550 1450
+Connection ~ 8900 1400
+Wire Wire Line
+	8550 1750 8550 1800
+Wire Wire Line
+	8550 1800 8900 1800
+Connection ~ 8900 1800
+Wire Wire Line
+	8900 1800 8900 1900
+Wire Wire Line
+	8800 2900 8800 3150
+Wire Wire Line
+	8800 2900 9000 2900
+Wire Wire Line
+	8900 2500 8900 3000
+Wire Wire Line
+	8900 3000 9000 3000
+$Comp
+L Device:R R4
+U 1 1 5EEA9950
+P 6750 1350
+F 0 "R4" H 6820 1396 50  0000 L CNN
+F 1 "10k" H 6820 1305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6680 1350 50  0001 C CNN
+F 3 "~" H 6750 1350 50  0001 C CNN
+	1    6750 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 1600 6750 1500
+Connection ~ 6750 1600
+Wire Wire Line
+	1850 3200 6750 3200
+$Comp
+L power:+3V3 #PWR014
+U 1 1 5EEC7E42
+P 6750 1200
+F 0 "#PWR014" H 6750 1050 50  0001 C CNN
+F 1 "+3V3" H 6765 1373 50  0000 C CNN
+F 2 "" H 6750 1200 50  0001 C CNN
+F 3 "" H 6750 1200 50  0001 C CNN
+	1    6750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR013
+U 1 1 5EECC819
+P 5950 1200
+F 0 "#PWR013" H 5950 1050 50  0001 C CNN
+F 1 "+3V3" H 5965 1373 50  0000 C CNN
+F 2 "" H 5950 1200 50  0001 C CNN
+F 3 "" H 5950 1200 50  0001 C CNN
+	1    5950 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 2400 7650 2400
+Wire Wire Line
+	7650 2400 7650 1300
+Wire Wire Line
+	7650 1300 9000 1300
+Wire Wire Line
+	6250 1800 8050 1800
+Wire Wire Line
+	8050 1800 8050 2700
+Wire Wire Line
+	8050 2700 9000 2700
+Wire Wire Line
+	8050 2700 8050 2900
+Connection ~ 8050 2700
+$Comp
+L Device:R R5
+U 1 1 5EE38F84
+P 8050 3050
+F 0 "R5" H 8120 3096 50  0000 L CNN
+F 1 "10k" H 8120 3005 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7980 3050 50  0001 C CNN
+F 3 "~" H 8050 3050 50  0001 C CNN
+	1    8050 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5EE399D5
+P 8050 3300
+F 0 "#PWR015" H 8050 3050 50  0001 C CNN
+F 1 "GND" H 8055 3127 50  0000 C CNN
+F 2 "" H 8050 3300 50  0001 C CNN
+F 3 "" H 8050 3300 50  0001 C CNN
+	1    8050 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3300 8050 3200
+$EndSCHEMATC
